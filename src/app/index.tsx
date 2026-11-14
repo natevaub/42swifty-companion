@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import { Text, View, StyleSheet } from "react-native";
+import { getToken } from "@/libs/test";
 
 export default function Index() {
+
+  useEffect(() => {
+    getToken();
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text>Edit src/app/index.tsx to edit this screen.</Text>
